@@ -35,23 +35,25 @@ proxy.on('error', function(err, req, res){
     res.writeHead(500, {
         'content-type': 'text/plain'
     });
-    res.end('Something went wrong. And we are reporting a custom error message.');
+    res.end('wrong');
 });
 
 // req : 从浏览器带来的请求信息
 // res : 从服务器返回给浏览器的信息
 var server = http.createServer(function(req,res){
-    var pathname = url.parse(req.url).pathname;;
+    var pathname = url.parse(req.url).pathname;
     //url.parse()方法将一个URL字符串转换成对象并返回，通过pathname来访问此url的地址。
-
+    
     //阻止请求favicon.ico
     if(pathname == "/favicon.ico"){
         res.end();
      };
-
-    var realPath = path.join('./',pathname);
+    if(pathname === '/'){
+        pathname += "index.html";
+    };
+    console.log(pathname)
+    var realPath = path.join(__dirname,pathname);
     //完整的url路径
-
     // 异常处理
     proxy.on('error', function (err, req, res) {
         res.writeHead(500, {
@@ -72,6 +74,7 @@ var server = http.createServer(function(req,res){
             res.end();
         }else {
             var ext = path.extname(realPath);
+            // 判断类型
             ext = ext ? ext.slice(1) : 'unknown';
             var contentType = MIME_TYPE[ext] || "text/plain";
             fs.readFile(realPath, function (err, data) {
