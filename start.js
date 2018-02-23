@@ -43,7 +43,7 @@ proxy.on('error', function(err, req, res){
 var server = http.createServer(function(req,res){
     var pathname = url.parse(req.url).pathname;
     //url.parse()方法将一个URL字符串转换成对象并返回，通过pathname来访问此url的地址。
-    
+
     //阻止请求favicon.ico
     if(pathname == "/favicon.ico"){
         res.end();
@@ -51,7 +51,7 @@ var server = http.createServer(function(req,res){
     if(pathname === '/'){
         pathname += "index.html";
     };
-    console.log(pathname)
+
     var realPath = path.join(__dirname,pathname);
     //完整的url路径
     // 异常处理

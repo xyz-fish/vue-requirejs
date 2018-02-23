@@ -14,5 +14,8 @@
   },
   "devDependencies": {
     "http-proxy": "^1.16.2"
+  },
+  "scripts": {
+    "start" : "node start.js"
   }
 }
