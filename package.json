@@ -1,6 +1,8 @@
 {
   "name": "vue_demo",
   "version": "0.0.1",
+  "description":"vue+requirejs",
+  "author":"song",
   "dependencies": {
     "echarts": "^3.7.2",
     "jquery": "^3.2.1",
