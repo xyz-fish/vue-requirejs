@@ -1,0 +1,14 @@
+
+<div class="m-container">
+    <ul class="m-sider">
+        <li v-for="data in menu">
+            <router-link :to="data.path">
+                <b></b>
+                {{data.name}}
+            </router-link>
+        </li>
+    </ul>
+    <div class="m-content">
+        <router-view></router-view>
+    </div>
+</div>

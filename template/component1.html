@@ -1,0 +1,47 @@
+<div>
+    <div class="m-card">
+        <div>
+        <div class="card-head">
+            <div class="card-head-left"></div>
+        </div>
+        <div class="echart">
+            ECHATS PART
+        </div>
+        <div class="e-data-intr">
+            <ul>
+                <li>
+                   <h6>百分比1</h6>
+                    <div class="e-data-num">
+                        <b>&uarr;</b>
+                        <span>50%</span>
+                    </div>
+                </li>
+                <li v-for="data in eData">
+                    <h6>{{data.type}}</h6>
+                    <div class="e-data-num">
+                        <b v-show="data.isC">&uarr;</b><b v-show="!data.isC">&darr;</b>
+                        <span>{{data.value}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-card">
+        <div class="card-head">
+            <div class="card-head-right"></div>
+        </div>
+        part2
+    </div>
+    <div class="m-card">
+        <div class="card-head">
+            <div class="card-head-right"></div>
+        </div>
+        {{msg}}
+    </div>
+    <div class="m-card">
+        <e-box>
+            <div slot="left"></div>
+            <p>这是默认的</p>
+        </e-box>
+    </div>
+</div>

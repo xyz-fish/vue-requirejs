@@ -1,0 +1,21 @@
+
+    <div>
+        <div v-if="this.$slots.left">
+            <slot name="head-left">
+                <div class="card-head">
+                    <div class="card-head-left"></div>
+                </div>
+            </slot>
+        </div>
+        <div v-if="this.$slots.right">
+            <slot name="head-right">
+                <div class="card-head">
+                    <div class="card-head-right"></div>
+                </div>
+            </slot>
+        </div>
+         <slot>hhh</slot>
+        <div v-if="this.$slots.text">
+            <slot name="text"></slot>
+        </div>
+    </div>

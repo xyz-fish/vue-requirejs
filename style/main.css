@@ -1,0 +1,99 @@
+.m-container{
+    background: #0f0f0f;
+    height: 100%;
+}
+
+.m-sider{
+    float: left;
+}
+.m-sider{
+    width:200px;
+    margin-top:100px;
+}
+.m-sider li a{
+    display: inline-block;
+    position: relative;
+    line-height:50px;
+    padding-left:60px;
+    font-size: 16px;
+    color: #413d31;
+    width:100%;
+}
+.m-sider li b{
+    margin-right:5px;
+    display: inline-block;
+    width:6px;
+    height:6px;
+    border-radius: 6px;
+    border: 2px solid #413d31;
+}
+.m-sider li .is-active{
+    font-size:20px;
+    color:#b7b3a7;
+    padding-left: 50px;
+}
+.m-sider li .is-active b{
+    font-size: 14px;
+    margin-right:10px;
+    border: 2px solid #b7b3a7;
+}
+.m-content{
+    padding: 50px;
+    margin-left:200px;
+}
+.m-card{
+    width:44%;
+    float: left;
+    margin:3% 20px;
+
+}
+.card-head{
+    height:2px;
+    border-bottom: 2px solid #2b271b;
+    width:100%;
+}
+.card-head-left,.card-head-right{
+    height:0;
+    width:50px;
+    border-bottom:2px solid #2b271b;
+}
+.card-head-left{
+    border-right: 12px solid transparent;
+}
+.card-head-right{
+    float: right;
+    border-left: 12px solid transparent;
+}
+.echart{
+    height:150px;
+}
+.e-data-intr ul{
+    overflow: hidden;
+}
+.e-data-intr li{
+    float: left;
+    margin:10px 20px;
+    width:100px;
+}
+.e-data-intr li h6{
+    /*width:70px;*/
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    font-size:16px
+}
+.e-data-num{
+    /*width:70px;*/
+    text-align: center;
+    border-bottom: 2px solid #2b271b;
+    position: relative;
+    color: #af9c7b;
+}
+.e-data-num b{
+    position: absolute;
+    left:2px;
+    top:5px;
+}
+.e-data-num span{
+    font-size:20px;
+}
